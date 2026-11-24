@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=LibrePods
+Exec=/home/ormon/Applications/librepods.AppImage
+Icon=me.kavishdevar.librepods
+Type=Application
+Categories=Utility;

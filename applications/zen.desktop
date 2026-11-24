@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Zen Browser
+Exec=/home/ormon/Desktop/zen/zen
+Icon=/home/ormon/Desktop/zen/browser/chrome/icons/default/default128.png
+Type=Application
+Categories=Network;WebBrowser;

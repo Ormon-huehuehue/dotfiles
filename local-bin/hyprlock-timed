@@ -1,0 +1,5 @@
+#!/bin/sh
+# ponytail: temporary diagnostic wrapper for slow Super+L; delete after.
+log="$HOME/.local/state/hyprlock-timing.log"
+echo "=== pressed $(date +%T.%N)" >> "$log"
+hyprlock 2>&1 | while IFS= read -r l; do echo "$(date +%T.%N) $l"; done >> "$log"

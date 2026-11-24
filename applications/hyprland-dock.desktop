@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Hyprland Dock
+Comment=Start or restart the application dock
+Exec="/home/ormon/.local/bin/hyprland-dock" restart
+Icon=preferences-desktop
+Terminal=false
+Categories=Utility;
+Keywords=Dock;Launcher;Hyprland;
+StartupNotify=false

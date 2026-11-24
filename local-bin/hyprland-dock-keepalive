@@ -1,0 +1,18 @@
+#!/bin/sh
+# Keeps the dock running: restarts it whenever it exits, and logs why it exited
+# (the dock has been dying silently; this log should show the exit code/signal).
+log="${XDG_STATE_HOME:-$HOME/.local/state}/hyprland-dock-exits.log"
+mkdir -p "$(dirname "$log")"
+
+# only one keepalive at a time
+exec 9>"${XDG_RUNTIME_DIR:-/tmp}/hyprland-dock-keepalive.lock"
+flock -n 9 || exit 0
+
+while :; do
+  HYPRLAND_DOCK_CONFIG="$HOME/.config/hyprland-dock/dock.json" \
+    qs -n -p "$HOME/.local/share/hyprland-dock" 9>&-
+  rc=$?
+  # rc > 128 means killed by signal (rc - 128)
+  echo "$(date '+%F %T') dock exited rc=$rc" >> "$log"
+  sleep 1
+done

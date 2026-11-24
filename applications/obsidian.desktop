@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/home/ormon/.local/bin/Obsidian.AppImage
+Icon=Obsidian
+Type=Application
+Categories=Development;Utility;
+Terminal=false
+MimeType=x-scheme-handler/obsidian;

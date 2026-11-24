@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Vesktop
+Exec=/home/ormon/.local/bin/Vesktop.AppImage
+Icon=Discord
+Type=Application
+Categories=Development;Utility;
+Terminal=false
+
