@@ -1,0 +1,14 @@
+#!/bin/sh
+# Toggle the Quickshell Wi-Fi/Bluetooth dropdown under the cursor. Usage: netmenu-toggle wifi|bluetooth
+which="${1:-wifi}"
+dir="$HOME/.config/quickshell/netmenu"
+read -r name monx <<EOF
+$(hyprctl monitors -j | jq -r '.[] | select(.focused) | "\(.name) \(.x)"')
+EOF
+cx=$(hyprctl cursorpos -j | jq -r '.x | floor')
+x=$((cx - monx))
+qs -p "$dir" ipc call netmenu toggle "$which" "$name" "$x" 2>/dev/null || {
+  qs -p "$dir" -d >/dev/null 2>&1   # not running yet: start, then toggle
+  sleep 0.5
+  qs -p "$dir" ipc call netmenu toggle "$which" "$name" "$x"
+}
