@@ -1,0 +1,21 @@
+{
+  "iconSize": 36,
+  "magnification": 1,
+  "magnificationRadius": 120,
+  "margin": 6,
+  "backgroundOpacity": 0.12,
+  "position": "bottom",
+  "fullLength": false,
+  "reserveSpace": false,
+  "autoHide": true,
+  "clickAction": "focus-or-launch",
+  "pinned": [
+    "zen",
+    "com.anthropic.Claude",
+    "thunar",
+    "postman",
+    "spotifast",
+    "io.dbeaver.DBeaver",
+    "mongodb-compass"
+  ]
+}

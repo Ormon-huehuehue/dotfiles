@@ -1,0 +1,17 @@
+    "network": {
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "on-click-right": "nm-connection-editor",
+        "interface": "wlan0",
+        "on-click": "~/.local/bin/netmenu-toggle wifi",
+        "tooltip": true,
+        "format-wifi": "{icon}",
+        "rotate": ${r_deg},
+        "format-ethernet": "󰈀",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-linked": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-alt": "{icon}",
+        "interval": 2,
+    },
+
